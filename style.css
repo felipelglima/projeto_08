@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: 'Mulish', sans-serif;
+}
+
+:root{
+    font-size: 62.5%;
+
+    --fc-title: #B52184;
+    --fc-text: #312D64;
+
+    --fw-title: 900;
+    --fw-text: 600;
+
+    --bc-primary: #F9F4FB;
+    --bc-secondary: linear-gradient(96.21deg, #343193 0%, #302C63 99.68%);
+}
+
+@keyframes topdown{
+    0%{
+        transform: translateY(-2.0rem);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+header, header div{
+    background-color: var(--bc-primary);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    animation: topdown 2s;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1{
+    font-size: 3.2rem;
+    line-height: 4.0rem;
+    font-weight: var(--fw-title);
+    color: var(--fc-title);
+
+    margin: 1.7rem auto 0.5rem;
+}
+
+header p{
+    font-size: 2.0rem;
+    line-height: 2.5rem;
+    font-weight: var(--fw-text);
+    color: var(--fc-text);
+}
+
+#arrow{
+    padding: 2.9rem 1.4rem;
+
+    border: 0.4rem solid #B52184;
+    border-radius: 76.0rem;
+
+    margin: 3.5rem auto 9.3rem;
+}
+
+main{
+    background: var(--bc-secondary);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5.0rem;
+
+    padding: 5.0rem 4.0rem;
+}
+
+.box{
+    background: white;
+
+    box-shadow: 0rem 0.3rem 1.3rem rgba(0, 0, 0, 0.25);
+    border-radius: 2.0rem;
+
+    padding: 2.6rem;
+
+    transition: ease-out 500ms;    
+}
+
+.box:hover{
+    transform: scale(105%);
+    transition: ease-in 500ms;
+}
+
+h2{
+    font-size: 3.0rem;
+    line-height: 3.7rem;
+    font-weight: var(--fw-title);
+    color: var(--fc-title);
+
+    margin: 3.3rem auto 2.0rem;
+}
+
+main p{
+    font-size: 1.6rem;
+    line-height: 2.0rem;
+    font-weight: var(--fw-text);
+    color: var(--fc-text);
+
+    padding-right: 6.0rem;
+}
+
+form{
+    background: var(--bc-primary);
+
+    display: flex;
+    flex-direction: column;
+    gap: 2.0rem;
+
+    padding: 7rem 4.0rem;
+}
+
+legend{
+    font-size: 3.2rem;
+    line-height: 4.0rem;
+    font-weight: var(--fw-title);
+    color: var(--fc-title);
+}
+
+input{
+    border: 0.2rem solid var(--fc-text);
+
+    height: 5.0rem;
+    border-radius: 2.0rem;
+
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    font-weight: var(--fw-text);
+    color: var(--fc-text);
+
+    padding: 3.5rem;
+}
+
+#name{
+    background: white url("images/person.svg") no-repeat left;
+    background-position: 1rem;
+}
+
+#email{
+    background: white url("images/email.svg") no-repeat left;
+    background-position: 1rem;
+}
+
+textarea{
+    border: 0.2rem solid var(--fc-text);
+
+    height: 15.0rem;
+    border-radius: 2.0rem;
+
+    background: white;
+
+    resize: none;
+
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    font-weight: var(--fw-text);
+    color: var(--fc-text);
+
+    padding: 2rem;
+}
+
+#button{
+    border: none;
+
+    background: var(--bc-secondary);
+
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+
+    height: 5.0rem;
+    width: 15.0rem;
+    border-radius: 2.0rem;
+    box-shadow: 0rem 0.3rem 1.3rem rgba(0, 0, 0, 0.25);
+
+    padding: 0;
+}
+
+#button:hover{
+    cursor: pointer;
+
+    opacity: 0.9;
+}
+
+footer div{
+    background: var(--bc-secondary);
+
+    font-size: 2.0rem;
+    line-height: 2.5rem;
+    font-weight: var(--fw-text);
+    color: white;
+    text-align: center;
+
+    padding: 3.2rem 0;
+}
+
+@media(min-width: 900px){
+    header div{
+        margin: 10rem 50rem 5rem 0rem;
+    }
+
+    #astronaut{
+        position: absolute;
+        top: 0;
+        right: 15rem;
+    }
+
+    #arrow{
+        margin-top: 5rem;
+        margin-left: 0;
+
+        scale: 60%;
+    }
+
+    main{
+        flex-direction: row;
+    }
+
+    form{
+        background: url("images/stars.svg") no-repeat right;
+
+    }
+
+    input, textarea{
+        max-width: 50%;
+    }
+}
